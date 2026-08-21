@@ -1,294 +1,1011 @@
 "use strict";
 
 
-/* =========================================
+/* =========================================================
    PHONE DATA
-========================================= */
+   All listed prices start at ₹10,000 or above.
+========================================================= */
 
 const phones = [
 
     {
         id: 1,
-        brand: "Apple",
-        name: "iPhone 17 Pro Max",
-        price: 149999,
-        rating: 4.9,
-        image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600",
-        specs: '6.9" OLED • 12GB RAM • 256GB • 5G',
+        brand: "Samsung",
+        name: "Galaxy A56 5G",
+        price: 41999,
+        mrp: 44999,
+        rating: 4.6,
+        discount: 7,
+
+        images: [
+            "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800",
+            "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b1b?w=800",
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "256GB",
+        processor: "Octa-Core",
+        display: "6.7-inch AMOLED",
+        camera: "50MP + 12MP + 5MP",
+        selfie: "12MP",
+        battery: "5000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 256GB • 6.7-inch AMOLED • 50MP Camera • 5000mAh • 5G",
+
         description:
-            "Premium Apple flagship smartphone with powerful performance and an advanced camera system."
+            "A premium Samsung smartphone with a large AMOLED display, versatile camera system and long-lasting battery."
     },
+
 
     {
         id: 2,
-        brand: "Apple",
-        name: "iPhone 17",
-        price: 89999,
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600",
-        specs: '6.3" OLED • 8GB RAM • 128GB • 5G',
+        brand: "Samsung",
+        name: "Galaxy A36 5G",
+        price: 32999,
+        mrp: 36999,
+        rating: 4.5,
+        discount: 11,
+
+        images: [
+            "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800",
+            "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b1b?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Octa-Core",
+        display: "6.7-inch AMOLED",
+        camera: "50MP + 8MP + 5MP",
+        selfie: "13MP",
+        battery: "5000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • 6.7-inch AMOLED • 50MP Camera • 5000mAh • 5G",
+
         description:
-            "Powerful and compact Apple smartphone."
+            "A balanced Samsung phone designed for everyday performance, entertainment and photography."
     },
+
 
     {
         id: 3,
         brand: "Samsung",
-        name: "Galaxy S26 Ultra",
-        price: 139999,
-        rating: 4.9,
-        image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=600",
-        specs: '6.9" AMOLED • 12GB RAM • 256GB • 5G',
+        name: "Galaxy S25",
+        price: 74999,
+        mrp: 79999,
+        rating: 4.8,
+        discount: 6,
+
+        images: [
+            "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800",
+            "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b1b?w=800"
+        ],
+
+        ram: "12GB",
+        storage: "256GB",
+        processor: "Snapdragon",
+        display: "6.2-inch AMOLED",
+        camera: "50MP + 12MP + 10MP",
+        selfie: "12MP",
+        battery: "4000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "12GB RAM • 256GB • AMOLED • 50MP Camera • 4000mAh • 5G",
+
         description:
-            "Samsung flagship with a premium AMOLED display and professional camera system."
+            "A compact Samsung flagship combining high-end performance, cameras and premium design."
     },
+
 
     {
         id: 4,
         brand: "Samsung",
-        name: "Galaxy S26",
-        price: 79999,
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b1b?w=600",
-        specs: '6.2" AMOLED • 12GB RAM • 256GB • 5G',
+        name: "Galaxy S25 Ultra",
+        price: 129999,
+        mrp: 139999,
+        rating: 4.9,
+        discount: 7,
+
+        images: [
+            "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800",
+            "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b1b?w=800"
+        ],
+
+        ram: "12GB",
+        storage: "512GB",
+        processor: "Snapdragon",
+        display: "6.9-inch AMOLED",
+        camera: "200MP Multi Camera",
+        selfie: "12MP",
+        battery: "5000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "12GB RAM • 512GB • 6.9-inch AMOLED • 200MP Camera • 5000mAh • 5G",
+
         description:
-            "High-performance Samsung smartphone for everyday use."
+            "A premium Samsung flagship built for photography, gaming, productivity and high-performance use."
     },
+
 
     {
         id: 5,
-        brand: "OnePlus",
-        name: "OnePlus 14",
-        price: 69999,
+        brand: "Apple",
+        name: "iPhone 15",
+        price: 59999,
+        mrp: 69999,
         rating: 4.7,
-        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600",
-        specs: '6.7" AMOLED • 12GB RAM • 256GB • 5G',
+        discount: 14,
+
+        images: [
+            "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800",
+            "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800"
+        ],
+
+        ram: "6GB",
+        storage: "128GB",
+        processor: "A16 Bionic",
+        display: "6.1-inch OLED",
+        camera: "48MP + 12MP",
+        selfie: "12MP",
+        battery: "Built-in",
+        network: "5G",
+        os: "iOS",
+
+        specs:
+            "6GB RAM • 128GB • 6.1-inch OLED • 48MP Camera • 5G",
+
         description:
-            "Fast OnePlus flagship with a smooth display and high-performance hardware."
+            "A powerful Apple smartphone with a premium OLED display and capable dual-camera system."
     },
+
 
     {
         id: 6,
-        brand: "OnePlus",
-        name: "OnePlus Nord 6",
-        price: 39999,
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=600",
-        specs: '6.6" AMOLED • 8GB RAM • 128GB • 5G',
+        brand: "Apple",
+        name: "iPhone 15 Pro",
+        price: 84999,
+        mrp: 99999,
+        rating: 4.8,
+        discount: 15,
+
+        images: [
+            "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800",
+            "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "256GB",
+        processor: "A17 Pro",
+        display: "6.1-inch OLED",
+        camera: "48MP Pro Camera System",
+        selfie: "12MP",
+        battery: "Built-in",
+        network: "5G",
+        os: "iOS",
+
+        specs:
+            "8GB RAM • 256GB • OLED • A17 Pro • 48MP Camera • 5G",
+
         description:
-            "Affordable OnePlus smartphone focused on performance."
+            "A Pro iPhone designed for demanding performance, photography and video workloads."
     },
+
 
     {
         id: 7,
-        brand: "Google",
-        name: "Pixel 10 Pro XL",
-        price: 109999,
+        brand: "Apple",
+        name: "iPhone 16",
+        price: 69999,
+        mrp: 79999,
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600",
-        specs: '6.8" OLED • 16GB RAM • 256GB • 5G',
+        discount: 12,
+
+        images: [
+            "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800",
+            "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "A18",
+        display: "6.1-inch OLED",
+        camera: "48MP + 12MP",
+        selfie: "12MP",
+        battery: "Built-in",
+        network: "5G",
+        os: "iOS",
+
+        specs:
+            "8GB RAM • 128GB • OLED • A18 • 48MP Camera • 5G",
+
         description:
-            "Google smartphone featuring AI-focused software and computational photography."
+            "Modern iPhone combining strong performance, premium construction and excellent cameras."
     },
+
 
     {
         id: 8,
-        brand: "Xiaomi",
-        name: "Xiaomi 16 Ultra",
-        price: 89999,
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600",
-        specs: '6.8" AMOLED • 16GB RAM • 512GB • 5G',
+        brand: "Apple",
+        name: "iPhone 16 Pro Max",
+        price: 129999,
+        mrp: 144999,
+        rating: 4.9,
+        discount: 10,
+
+        images: [
+            "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800",
+            "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "256GB",
+        processor: "A18 Pro",
+        display: "6.9-inch OLED",
+        camera: "48MP Pro Camera System",
+        selfie: "12MP",
+        battery: "Built-in",
+        network: "5G",
+        os: "iOS",
+
+        specs:
+            "8GB RAM • 256GB • 6.9-inch OLED • A18 Pro • 5G",
+
         description:
-            "High-end Xiaomi smartphone with powerful hardware."
+            "A large Pro iPhone designed for demanding users, photography and video creation."
     },
+
 
     {
         id: 9,
-        brand: "Vivo",
-        name: "Vivo X300 Pro",
-        price: 79999,
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=600",
-        specs: '6.8" AMOLED • 12GB RAM • 256GB • 5G',
+        brand: "OnePlus",
+        name: "OnePlus 13",
+        price: 69999,
+        mrp: 74999,
+        rating: 4.8,
+        discount: 7,
+
+        images: [
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+            "https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=800"
+        ],
+
+        ram: "12GB",
+        storage: "256GB",
+        processor: "Snapdragon 8 Elite",
+        display: "6.82-inch AMOLED",
+        camera: "50MP Triple Camera",
+        selfie: "32MP",
+        battery: "6000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "12GB RAM • 256GB • 6.82-inch AMOLED • 50MP Triple Camera • 6000mAh",
+
         description:
-            "Camera-focused Vivo smartphone."
+            "A flagship OnePlus phone focused on speed, display quality, cameras and battery life."
     },
+
 
     {
         id: 10,
-        brand: "Oppo",
-        name: "Oppo Find X9 Pro",
-        price: 84999,
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600",
-        specs: '6.7" AMOLED • 12GB RAM • 256GB • 5G',
+        brand: "OnePlus",
+        name: "OnePlus 13R",
+        price: 42999,
+        mrp: 49999,
+        rating: 4.6,
+        discount: 14,
+
+        images: [
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+            "https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=800"
+        ],
+
+        ram: "12GB",
+        storage: "256GB",
+        processor: "Snapdragon",
+        display: "6.78-inch AMOLED",
+        camera: "50MP Triple Camera",
+        selfie: "16MP",
+        battery: "6000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "12GB RAM • 256GB • AMOLED • 50MP Camera • 6000mAh",
+
         description:
-            "Premium Oppo smartphone with powerful cameras."
+            "A performance-focused OnePlus phone offering flagship-style features at a lower price."
     },
+
 
     {
         id: 11,
-        brand: "Realme",
-        name: "Realme GT 8 Pro",
-        price: 54999,
+        brand: "OnePlus",
+        name: "OnePlus Nord 4",
+        price: 29999,
+        mrp: 34999,
         rating: 4.5,
-        image: "https://images.unsplash.com/photo-1592286927505-2fd0c0c9e8f6?w=600",
-        specs: '6.7" AMOLED • 12GB RAM • 256GB • 5G',
+        discount: 14,
+
+        images: [
+            "https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=800",
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Snapdragon",
+        display: "6.74-inch AMOLED",
+        camera: "50MP + 8MP",
+        selfie: "16MP",
+        battery: "5500mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • AMOLED • 50MP Camera • 5500mAh",
+
         description:
-            "Performance-oriented Realme smartphone."
+            "A stylish mid-range OnePlus smartphone with strong performance and battery life."
     },
+
 
     {
         id: 12,
-        brand: "Motorola",
-        name: "Motorola Edge 70 Ultra",
-        price: 64999,
-        rating: 4.5,
-        image: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=600",
-        specs: '6.7" pOLED • 12GB RAM • 256GB • 5G',
+        brand: "Xiaomi",
+        name: "Xiaomi 14",
+        price: 49999,
+        mrp: 59999,
+        rating: 4.7,
+        discount: 17,
+
+        images: [
+            "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+            "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?w=800"
+        ],
+
+        ram: "12GB",
+        storage: "256GB",
+        processor: "Snapdragon",
+        display: "6.36-inch AMOLED",
+        camera: "50MP Triple Camera",
+        selfie: "32MP",
+        battery: "4610mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "12GB RAM • 256GB • AMOLED • 50MP Triple Camera • 5G",
+
         description:
-            "Premium Motorola smartphone with a clean Android experience."
+            "Compact Xiaomi flagship with a high-quality display and versatile camera system."
     },
+
 
     {
         id: 13,
-        brand: "Nothing",
-        name: "Nothing Phone 4 Pro",
-        price: 59999,
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600",
-        specs: '6.7" AMOLED • 12GB RAM • 256GB • 5G',
+        brand: "Xiaomi",
+        name: "Redmi Note 14 Pro",
+        price: 27999,
+        mrp: 32999,
+        rating: 4.5,
+        discount: 15,
+
+        images: [
+            "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?w=800",
+            "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "256GB",
+        processor: "Octa-Core",
+        display: "6.67-inch AMOLED",
+        camera: "200MP",
+        selfie: "32MP",
+        battery: "5500mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 256GB • AMOLED • 200MP Camera • 5500mAh",
+
         description:
-            "Distinctive smartphone featuring Nothing's unique design."
+            "A feature-rich Redmi phone with a high-resolution camera and large AMOLED display."
     },
+
 
     {
         id: 14,
-        brand: "Samsung",
-        name: "Galaxy A57 5G",
-        price: 42999,
+        brand: "Xiaomi",
+        name: "Redmi Note 14",
+        price: 17999,
+        mrp: 20999,
         rating: 4.4,
-        image: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600",
-        specs: '6.6" AMOLED • 8GB RAM • 128GB • 5G',
+        discount: 14,
+
+        images: [
+            "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?w=800",
+            "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Octa-Core",
+        display: "6.67-inch AMOLED",
+        camera: "50MP",
+        selfie: "20MP",
+        battery: "5500mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • AMOLED • 50MP Camera • 5500mAh",
+
         description:
-            "Balanced Samsung smartphone for everyday users."
+            "Affordable Redmi smartphone with a large display and strong battery."
     },
+
 
     {
         id: 15,
-        brand: "OnePlus",
-        name: "OnePlus 14R",
-        price: 49999,
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=600",
-        specs: '6.7" AMOLED • 12GB RAM • 256GB • 5G',
+        brand: "Google",
+        name: "Pixel 9",
+        price: 59999,
+        mrp: 69999,
+        rating: 4.7,
+        discount: 14,
+
+        images: [
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+            "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800"
+        ],
+
+        ram: "12GB",
+        storage: "256GB",
+        processor: "Google Tensor",
+        display: "6.3-inch OLED",
+        camera: "50MP + 48MP",
+        selfie: "10.5MP",
+        battery: "4700mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "12GB RAM • 256GB • OLED • 50MP Camera • 4700mAh",
+
         description:
-            "Powerful OnePlus smartphone with excellent performance."
+            "Google phone with clean Android software and computational photography."
     },
+
 
     {
         id: 16,
-        brand: "Xiaomi",
-        name: "Redmi Note 15 Pro+",
-        price: 34999,
-        rating: 4.4,
-        image: "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?w=600",
-        specs: '6.7" AMOLED • 8GB RAM • 256GB • 5G',
+        brand: "Google",
+        name: "Pixel 9 Pro",
+        price: 89999,
+        mrp: 99999,
+        rating: 4.8,
+        discount: 10,
+
+        images: [
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+            "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800"
+        ],
+
+        ram: "16GB",
+        storage: "256GB",
+        processor: "Google Tensor",
+        display: "6.3-inch LTPO OLED",
+        camera: "50MP Triple Camera",
+        selfie: "42MP",
+        battery: "4700mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "16GB RAM • 256GB • LTPO OLED • Triple Camera • 4700mAh",
+
         description:
-            "Feature-packed Redmi smartphone at a competitive price."
+            "Premium Google smartphone with advanced camera hardware and AI-powered features."
     },
+
 
     {
         id: 17,
-        brand: "Apple",
-        name: "iPhone 16 Pro Max",
-        price: 134999,
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600",
-        specs: '6.9" OLED • 8GB RAM • 256GB • 5G',
+        brand: "Vivo",
+        name: "Vivo V50",
+        price: 34999,
+        mrp: 39999,
+        rating: 4.5,
+        discount: 13,
+
+        images: [
+            "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+            "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "256GB",
+        processor: "Snapdragon",
+        display: "6.77-inch AMOLED",
+        camera: "50MP Dual Camera",
+        selfie: "50MP",
+        battery: "6000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 256GB • AMOLED • 50MP Camera • 6000mAh",
+
         description:
-            "Premium iPhone with excellent performance and camera capabilities."
+            "Vivo smartphone focused on portrait photography, display quality and battery life."
     },
+
 
     {
         id: 18,
-        brand: "Samsung",
-        name: "Galaxy Z Fold",
-        price: 159999,
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=600",
-        specs: '7.6" AMOLED • 12GB RAM • 512GB • 5G',
+        brand: "Vivo",
+        name: "Vivo V40",
+        price: 29999,
+        mrp: 34999,
+        rating: 4.4,
+        discount: 14,
+
+        images: [
+            "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+            "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Snapdragon",
+        display: "6.78-inch AMOLED",
+        camera: "50MP Dual Camera",
+        selfie: "50MP",
+        battery: "5500mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • AMOLED • 50MP Camera • 5500mAh",
+
         description:
-            "Large foldable Samsung smartphone designed for productivity."
+            "Stylish Vivo smartphone with a strong camera setup and immersive display."
     },
+
 
     {
         id: 19,
-        brand: "Google",
-        name: "Pixel Pro",
-        price: 99999,
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600",
-        specs: '6.7" OLED • 12GB RAM • 256GB • 5G',
+        brand: "Oppo",
+        name: "Oppo Reno 13",
+        price: 37999,
+        mrp: 42999,
+        rating: 4.5,
+        discount: 12,
+
+        images: [
+            "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800",
+            "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "256GB",
+        processor: "MediaTek",
+        display: "6.59-inch AMOLED",
+        camera: "50MP Triple Camera",
+        selfie: "50MP",
+        battery: "5600mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 256GB • AMOLED • 50MP Camera • 5600mAh",
+
         description:
-            "Google smartphone with clean Android software."
+            "Oppo smartphone designed for photography, entertainment and everyday performance."
     },
+
 
     {
         id: 20,
-        brand: "Motorola",
-        name: "Moto Edge",
-        price: 44999,
+        brand: "Oppo",
+        name: "Oppo F29 Pro",
+        price: 29999,
+        mrp: 34999,
         rating: 4.4,
-        image: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=600",
-        specs: '6.7" pOLED • 8GB RAM • 256GB • 5G',
+        discount: 14,
+
+        images: [
+            "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800",
+            "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Octa-Core",
+        display: "6.7-inch AMOLED",
+        camera: "50MP",
+        selfie: "16MP",
+        battery: "6000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • AMOLED • 50MP Camera • 6000mAh",
+
         description:
-            "Motorola smartphone with a premium display and smooth Android experience."
+            "Oppo smartphone with a large AMOLED display and high-capacity battery."
+    },
+
+
+    {
+        id: 21,
+        brand: "Realme",
+        name: "Realme GT 7",
+        price: 42999,
+        mrp: 49999,
+        rating: 4.6,
+        discount: 14,
+
+        images: [
+            "https://images.unsplash.com/photo-1592286927505-2fd0c0c9e8f6?w=800",
+            "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=800"
+        ],
+
+        ram: "12GB",
+        storage: "256GB",
+        processor: "Dimensity",
+        display: "6.78-inch AMOLED",
+        camera: "50MP Triple Camera",
+        selfie: "16MP",
+        battery: "7000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "12GB RAM • 256GB • AMOLED • 50MP Camera • 7000mAh",
+
+        description:
+            "Performance-focused Realme phone with a large battery and high refresh-rate display."
+    },
+
+
+    {
+        id: 22,
+        brand: "Realme",
+        name: "Realme 14 Pro",
+        price: 27999,
+        mrp: 31999,
+        rating: 4.4,
+        discount: 13,
+
+        images: [
+            "https://images.unsplash.com/photo-1592286927505-2fd0c0c9e8f6?w=800",
+            "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Dimensity",
+        display: "6.77-inch OLED",
+        camera: "50MP",
+        selfie: "16MP",
+        battery: "6000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • OLED • 50MP Camera • 6000mAh",
+
+        description:
+            "A stylish Realme smartphone with strong battery performance."
+    },
+
+
+    {
+        id: 23,
+        brand: "Motorola",
+        name: "Motorola Edge 60 Pro",
+        price: 39999,
+        mrp: 44999,
+        rating: 4.5,
+        discount: 11,
+
+        images: [
+            "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=800",
+            "https://images.unsplash.com/photo-1592286927505-2fd0c0c9e8f6?w=800"
+        ],
+
+        ram: "12GB",
+        storage: "256GB",
+        processor: "Dimensity",
+        display: "6.7-inch pOLED",
+        camera: "50MP Triple Camera",
+        selfie: "50MP",
+        battery: "6000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "12GB RAM • 256GB • pOLED • 50MP Camera • 6000mAh",
+
+        description:
+            "Premium Motorola phone with a curved display and clean Android experience."
+    },
+
+
+    {
+        id: 24,
+        brand: "Motorola",
+        name: "Moto G85",
+        price: 19999,
+        mrp: 22999,
+        rating: 4.3,
+        discount: 13,
+
+        images: [
+            "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=800",
+            "https://images.unsplash.com/photo-1592286927505-2fd0c0c9e8f6?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Snapdragon",
+        display: "6.67-inch pOLED",
+        camera: "50MP + 8MP",
+        selfie: "32MP",
+        battery: "5000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • pOLED • 50MP Camera • 5000mAh",
+
+        description:
+            "Affordable Motorola smartphone with a premium-looking curved display."
+    },
+
+
+    {
+        id: 25,
+        brand: "Nothing",
+        name: "Nothing Phone 3",
+        price: 49999,
+        mrp: 54999,
+        rating: 4.5,
+        discount: 9,
+
+        images: [
+            "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800"
+        ],
+
+        ram: "12GB",
+        storage: "256GB",
+        processor: "Snapdragon",
+        display: "6.67-inch AMOLED",
+        camera: "50MP Dual Camera",
+        selfie: "32MP",
+        battery: "5000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "12GB RAM • 256GB • AMOLED • 50MP Camera • 5000mAh",
+
+        description:
+            "Distinctive Nothing smartphone with a unique transparent-inspired design."
+    },
+
+
+    {
+        id: 26,
+        brand: "Nothing",
+        name: "Nothing Phone 3a",
+        price: 24999,
+        mrp: 27999,
+        rating: 4.4,
+        discount: 11,
+
+        images: [
+            "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Snapdragon",
+        display: "6.77-inch AMOLED",
+        camera: "50MP Triple Camera",
+        selfie: "32MP",
+        battery: "5000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • AMOLED • 50MP Triple Camera • 5000mAh",
+
+        description:
+            "Affordable Nothing phone combining a clean interface with distinctive hardware design."
+    },
+
+
+    {
+        id: 27,
+        brand: "Samsung",
+        name: "Galaxy M35 5G",
+        price: 16999,
+        mrp: 19999,
+        rating: 4.3,
+        discount: 15,
+
+        images: [
+            "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800",
+            "https://images.unsplash.com/photo-1610792516307-ea5acd9c3b1b?w=800"
+        ],
+
+        ram: "6GB",
+        storage: "128GB",
+        processor: "Exynos",
+        display: "6.6-inch AMOLED",
+        camera: "50MP Triple Camera",
+        selfie: "13MP",
+        battery: "6000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "6GB RAM • 128GB • AMOLED • 50MP Camera • 6000mAh",
+
+        description:
+            "Battery-focused Samsung smartphone suitable for everyday use and entertainment."
+    },
+
+
+    {
+        id: 28,
+        brand: "OnePlus",
+        name: "OnePlus Nord CE 4",
+        price: 21999,
+        mrp: 24999,
+        rating: 4.4,
+        discount: 12,
+
+        images: [
+            "https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=800",
+            "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Snapdragon",
+        display: "6.7-inch AMOLED",
+        camera: "50MP + 8MP",
+        selfie: "16MP",
+        battery: "5500mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • AMOLED • 50MP Camera • 5500mAh",
+
+        description:
+            "OnePlus mid-range phone offering fast charging and smooth everyday performance."
+    },
+
+
+    {
+        id: 29,
+        brand: "Realme",
+        name: "Realme P3 Pro",
+        price: 23999,
+        mrp: 26999,
+        rating: 4.3,
+        discount: 11,
+
+        images: [
+            "https://images.unsplash.com/photo-1592286927505-2fd0c0c9e8f6?w=800",
+            "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "128GB",
+        processor: "Snapdragon",
+        display: "6.83-inch AMOLED",
+        camera: "50MP + 8MP",
+        selfie: "16MP",
+        battery: "6000mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 128GB • AMOLED • 50MP Camera • 6000mAh",
+
+        description:
+            "Realme smartphone designed for gaming, entertainment and long battery life."
+    },
+
+
+    {
+        id: 30,
+        brand: "Xiaomi",
+        name: "Poco X7 Pro",
+        price: 27999,
+        mrp: 31999,
+        rating: 4.6,
+        discount: 13,
+
+        images: [
+            "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+            "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?w=800"
+        ],
+
+        ram: "8GB",
+        storage: "256GB",
+        processor: "Dimensity",
+        display: "6.67-inch AMOLED",
+        camera: "50MP + 8MP",
+        selfie: "20MP",
+        battery: "6550mAh",
+        network: "5G",
+        os: "Android",
+
+        specs:
+            "8GB RAM • 256GB • AMOLED • 50MP Camera • 6550mAh",
+
+        description:
+            "Performance-focused smartphone with a large battery and high-refresh-rate AMOLED display."
     }
 
 ];
 
 
-/* =========================================
+/* =========================================================
    STATE
-========================================= */
+========================================================= */
 
 let currentPhones = [...phones];
 
 let currentBrand = "All";
 
-
 let cart = loadStorage(
-    "phoneCart",
+    "phonehub_cart",
     []
 );
 
 let wishlist = loadStorage(
-    "phoneWishlist",
+    "phonehub_wishlist",
     []
 );
 
 
-/* =========================================
-   HELPERS
-========================================= */
+/* =========================================================
+   STORAGE
+========================================================= */
 
 function loadStorage(key, fallback) {
 
     try {
 
-        const saved =
+        const value =
             localStorage.getItem(key);
 
-        if (!saved) {
+        if (!value) {
             return fallback;
         }
 
-        const data =
-            JSON.parse(saved);
-
-        return data;
+        return JSON.parse(value);
 
     } catch (error) {
 
@@ -314,37 +1031,43 @@ function saveStorage(key, value) {
     } catch (error) {
 
         console.warn(
-            "Could not save storage:",
+            "Save error:",
             error
         );
     }
 }
 
 
-function formatPrice(price) {
+/* =========================================================
+   FORMAT
+========================================================= */
 
-    return Number(price).toLocaleString(
-        "en-IN"
-    );
+function money(value) {
+
+    return Number(value)
+        .toLocaleString("en-IN");
 }
 
 
-/* =========================================
-   DISPLAY PHONES
-========================================= */
+/* =========================================================
+   DISPLAY PRODUCTS
+========================================================= */
 
 function displayPhones(list) {
 
     const grid =
-        document.getElementById("phoneGrid");
+        document.getElementById(
+            "phoneGrid"
+        );
 
-    const resultCount =
-        document.getElementById("resultCount");
+
+    const count =
+        document.getElementById(
+            "resultCount"
+        );
+
 
     if (!grid) {
-        console.error(
-            "phoneGrid element not found."
-        );
         return;
     }
 
@@ -352,26 +1075,31 @@ function displayPhones(list) {
     grid.innerHTML = "";
 
 
-    if (resultCount) {
+    if (count) {
 
-        resultCount.textContent =
+        count.textContent =
             `Showing ${list.length} phone${list.length === 1 ? "" : "s"}`;
+
     }
 
 
-    if (list.length === 0) {
+    if (!list.length) {
 
         grid.innerHTML = `
+
             <div class="empty-state">
 
-                <h2>😕 No phones found</h2>
+                <h2>
+                    😕 No phones found
+                </h2>
 
                 <p>
-                    Try another phone name, brand,
-                    or price range.
+                    Try another brand,
+                    model or price range.
                 </p>
 
             </div>
+
         `;
 
         return;
@@ -385,71 +1113,90 @@ function displayPhones(list) {
 
 
         const card =
-            document.createElement("article");
+            document.createElement(
+                "article"
+            );
+
 
         card.className =
-            "phone-card";
+            "product-card";
 
 
         card.innerHTML = `
 
-            <div class="phone-image">
+            <div class="product-image-area">
 
-                <img
-                    src="${phone.image}"
-                    alt="${phone.name}"
-                    loading="lazy"
-                    onerror="imageError(this)"
-                >
+                <span class="discount-badge">
+                    ${phone.discount}% OFF
+                </span>
 
                 <button
-                    class="heart"
-                    type="button"
+                    class="wishlist-btn"
                     data-wishlist="${phone.id}"
-                    aria-label="Add to wishlist"
+                    type="button"
                 >
                     ${liked ? "❤️" : "🤍"}
                 </button>
 
+                <img
+                    src="${phone.images[0]}"
+                    alt="${phone.name}"
+                    loading="lazy"
+                    onerror="imageFallback(this)"
+                >
+
             </div>
 
 
-            <div class="phone-info">
+            <div class="product-info">
 
-                <div class="brand">
+                <div class="product-brand">
                     ${phone.brand}
                 </div>
 
-                <h3 class="phone-name">
+
+                <h3 class="product-name">
                     ${phone.name}
                 </h3>
 
-                <div class="specs">
-                    ${phone.specs}
-                </div>
 
-                <div class="rating">
+                <p class="product-short-specs">
+                    ${phone.specs}
+                </p>
+
+
+                <div class="product-rating">
                     ⭐ ${phone.rating}
                 </div>
 
-                <div class="price">
-                    ₹${formatPrice(phone.price)}
+
+                <div class="price-row">
+
+                    <span class="current-price">
+                        ₹${money(phone.price)}
+                    </span>
+
+                    <span class="mrp">
+                        ₹${money(phone.mrp)}
+                    </span>
+
                 </div>
+
 
                 <div class="card-buttons">
 
                     <button
-                        class="details"
-                        type="button"
+                        class="details-button"
                         data-details="${phone.id}"
+                        type="button"
                     >
-                        Details
+                        View Details
                     </button>
 
                     <button
-                        class="add-cart"
+                        class="add-cart-button"
+                        data-add-cart="${phone.id}"
                         type="button"
-                        data-cart="${phone.id}"
                     >
                         🛒 Add
                     </button>
@@ -463,68 +1210,85 @@ function displayPhones(list) {
         grid.appendChild(card);
 
     });
-
 }
 
 
-/* =========================================
+/* =========================================================
    IMAGE FALLBACK
-========================================= */
+========================================================= */
 
-function imageError(img) {
+function imageFallback(img) {
 
     img.onerror = null;
 
     img.src =
-        "https://dummyimage.com/500x600/e5e7eb/111827&text=Phone";
+        "https://dummyimage.com/500x650/e5e7eb/111827&text=Phone";
 }
 
 
-/* =========================================
-   FILTER
-========================================= */
+/* =========================================================
+   SEARCH + FILTER
+========================================================= */
 
 function applyFilters() {
 
-    const searchInput =
-        document.getElementById("searchInput");
-
-    const minInput =
-        document.getElementById("minPrice");
-
-    const maxInput =
-        document.getElementById("maxPrice");
-
-
     const search =
-        searchInput
-            ? searchInput.value.trim().toLowerCase()
-            : "";
+        document.getElementById(
+            "searchInput"
+        )?.value
+            .trim()
+            .toLowerCase() || "";
 
 
     const min =
-        minInput && minInput.value !== ""
-            ? Number(minInput.value)
-            : 0;
+        Number(
+            document.getElementById(
+                "minPrice"
+            )?.value
+        ) || 10000;
+
+
+    const maxValue =
+        document.getElementById(
+            "maxPrice"
+        )?.value;
 
 
     const max =
-        maxInput && maxInput.value !== ""
-            ? Number(maxInput.value)
+        maxValue
+            ? Number(maxValue)
             : Infinity;
+
+
+    const rating =
+        Number(
+            document.getElementById(
+                "ratingSelect"
+            )?.value
+        ) || 0;
 
 
     currentPhones =
         phones.filter(phone => {
 
+            const text =
+                (
+                    phone.name +
+                    " " +
+                    phone.brand +
+                    " " +
+                    phone.processor +
+                    " " +
+                    phone.ram +
+                    " " +
+                    phone.storage
+                )
+                    .toLowerCase();
+
+
             const matchesSearch =
                 !search ||
-                phone.name
-                    .toLowerCase()
-                    .includes(search) ||
-                phone.brand
-                    .toLowerCase()
-                    .includes(search);
+                text.includes(search);
 
 
             const matchesBrand =
@@ -537,79 +1301,30 @@ function applyFilters() {
                 phone.price <= max;
 
 
+            const matchesRating =
+                phone.rating >= rating;
+
+
             return (
                 matchesSearch &&
                 matchesBrand &&
-                matchesPrice
+                matchesPrice &&
+                matchesRating
             );
 
         });
 
 
-    sortCurrentList();
+    sortCurrentPhones();
 }
 
 
-/* =========================================
-   SEARCH
-========================================= */
-
-function searchPhones() {
-
-    applyFilters();
-
-}
-
-
-/* =========================================
-   BRAND FILTER
-========================================= */
-
-function filterBrand(brand) {
-
-    currentBrand =
-        brand || "All";
-
-
-    document
-        .querySelectorAll(".brand-btn")
-        .forEach(button => {
-
-            button.classList.toggle(
-                "active",
-                button.dataset.brand === currentBrand
-            );
-
-        });
-
-
-    applyFilters();
-
-
-    scrollToPhones();
-}
-
-
-/* =========================================
-   SORT
-========================================= */
-
-function sortPhones() {
-
-    sortCurrentList();
-
-}
-
-
-function sortCurrentList() {
-
-    const select =
-        document.getElementById("sortSelect");
+function sortCurrentPhones() {
 
     const sort =
-        select
-            ? select.value
-            : "default";
+        document.getElementById(
+            "sortSelect"
+        )?.value || "default";
 
 
     if (sort === "low") {
@@ -631,6 +1346,13 @@ function sortCurrentList() {
         currentPhones.sort(
             (a, b) =>
                 b.rating - a.rating
+        );
+
+    } else if (sort === "discount") {
+
+        currentPhones.sort(
+            (a, b) =>
+                b.discount - a.discount
         );
 
     } else if (sort === "name") {
@@ -658,15 +1380,91 @@ function sortCurrentList() {
 }
 
 
-/* =========================================
-   PHONE DETAILS
-========================================= */
+/* =========================================================
+   BRAND
+========================================================= */
 
-function showDetails(id) {
+function setBrand(brand) {
+
+    currentBrand =
+        brand || "All";
+
+
+    document
+        .querySelectorAll(
+            ".brand-button"
+        )
+        .forEach(button => {
+
+            button.classList.toggle(
+                "active",
+                button.dataset.brand === currentBrand
+            );
+
+        });
+
+
+    const select =
+        document.getElementById(
+            "brandSelect"
+        );
+
+
+    if (select) {
+        select.value =
+            currentBrand;
+    }
+
+
+    applyFilters();
+}
+
+
+/* =========================================================
+   QUICK PRICE
+========================================================= */
+
+function quickPrice(min, max) {
+
+    const minInput =
+        document.getElementById(
+            "minPrice"
+        );
+
+    const maxInput =
+        document.getElementById(
+            "maxPrice"
+        );
+
+
+    if (minInput) {
+        minInput.value =
+            min;
+    }
+
+
+    if (maxInput) {
+        maxInput.value =
+            max;
+    }
+
+
+    applyFilters();
+
+    scrollToPhones();
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+function openProduct(id) {
 
     const phone =
         phones.find(
-            item => item.id === Number(id)
+            item =>
+                item.id === Number(id)
         );
 
 
@@ -676,66 +1474,186 @@ function showDetails(id) {
 
 
     const modalBody =
-        document.getElementById("modalBody");
+        document.getElementById(
+            "productModalBody"
+        );
 
 
     modalBody.innerHTML = `
 
-        <div class="modal-phone">
+        <div class="product-detail-grid">
 
-            <img
-                src="${phone.image}"
-                alt="${phone.name}"
-                onerror="imageError(this)"
-            >
+            <div class="gallery">
 
-            <div>
+                <div class="thumbnail-list">
 
-                <div class="brand">
+                    ${phone.images
+                        .map(
+                            (image, index) => `
+
+                            <button
+                                class="thumbnail ${
+                                    index === 0
+                                        ? "active"
+                                        : ""
+                                }"
+                                data-image="${image}"
+                                type="button"
+                            >
+
+                                <img
+                                    src="${image}"
+                                    alt="${phone.name}"
+                                    onerror="imageFallback(this)"
+                                >
+
+                            </button>
+
+                        `
+                        )
+                        .join("")}
+
+                </div>
+
+
+                <div class="main-product-image">
+
+                    <img
+                        id="mainProductImage"
+                        src="${phone.images[0]}"
+                        alt="${phone.name}"
+                        onerror="imageFallback(this)"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="product-details">
+
+                <div class="detail-brand">
                     ${phone.brand}
                 </div>
 
-                <h2>
+
+                <h1 class="detail-title">
                     ${phone.name}
-                </h2>
+                </h1>
 
-                <div class="rating">
-                    ⭐ ${phone.rating} / 5
+
+                <div class="detail-rating">
+                    ⭐ ${phone.rating}
+                    / 5
                 </div>
 
-                <div class="price">
-                    ₹${formatPrice(phone.price)}
-                </div>
 
-                <div class="modal-specs">
+                <div>
 
-                    <strong>
-                        Specifications
-                    </strong>
+                    <span class="detail-price">
+                        ₹${money(phone.price)}
+                    </span>
 
-                    <p>
-                        ${phone.specs}
-                    </p>
+                    <span class="detail-mrp">
+                        ₹${money(phone.mrp)}
+                    </span>
 
-                    <br>
-
-                    <strong>
-                        About
-                    </strong>
-
-                    <p>
-                        ${phone.description}
-                    </p>
+                    <span class="detail-discount">
+                        ${phone.discount}% OFF
+                    </span>
 
                 </div>
 
-                <button
-                    class="checkout"
-                    type="button"
-                    data-modal-cart="${phone.id}"
-                >
-                    🛒 Add To Cart
-                </button>
+
+                <p class="detail-description">
+                    ${phone.description}
+                </p>
+
+
+                <div class="detail-actions">
+
+                    <button
+                        class="detail-add-cart"
+                        data-detail-cart="${phone.id}"
+                        type="button"
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        class="buy-now"
+                        data-buy-now="${phone.id}"
+                        type="button"
+                    >
+                        ⚡ Buy Now
+                    </button>
+
+                </div>
+
+
+                <h3 class="spec-title">
+                    📋 Full Specifications
+                </h3>
+
+
+                <table class="spec-table">
+
+                    <tr>
+                        <td>Brand</td>
+                        <td>${phone.brand}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Model</td>
+                        <td>${phone.name}</td>
+                    </tr>
+
+                    <tr>
+                        <td>RAM</td>
+                        <td>${phone.ram}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Storage</td>
+                        <td>${phone.storage}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Processor</td>
+                        <td>${phone.processor}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Display</td>
+                        <td>${phone.display}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Rear Camera</td>
+                        <td>${phone.camera}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Front Camera</td>
+                        <td>${phone.selfie}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Battery</td>
+                        <td>${phone.battery}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Network</td>
+                        <td>${phone.network}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Operating System</td>
+                        <td>${phone.os}</td>
+                    </tr>
+
+                </table>
 
             </div>
 
@@ -744,23 +1662,25 @@ function showDetails(id) {
 
 
     openModal(
-        "phoneModal"
+        "productModal"
     );
 }
 
 
-/* =========================================
-   MODAL
-========================================= */
+/* =========================================================
+   MODALS
+========================================================= */
 
 function openModal(id) {
 
     const modal =
         document.getElementById(id);
 
+
     if (!modal) {
         return;
     }
+
 
     modal.classList.add("show");
 
@@ -774,22 +1694,16 @@ function openModal(id) {
 }
 
 
-function closeModal() {
-
-    closeSpecificModal(
-        "phoneModal"
-    );
-}
-
-
-function closeSpecificModal(id) {
+function closeModal(id) {
 
     const modal =
         document.getElementById(id);
 
+
     if (!modal) {
         return;
     }
+
 
     modal.classList.remove("show");
 
@@ -803,24 +1717,25 @@ function closeSpecificModal(id) {
 }
 
 
-/* =========================================
+/* =========================================================
    CART
-========================================= */
+========================================================= */
 
 function addToCart(id) {
 
     id = Number(id);
 
 
-    const existing =
+    const item =
         cart.find(
-            item => item.id === id
+            product =>
+                product.id === id
         );
 
 
-    if (existing) {
+    if (item) {
 
-        existing.quantity += 1;
+        item.quantity++;
 
     } else {
 
@@ -833,7 +1748,7 @@ function addToCart(id) {
 
 
     saveStorage(
-        "phoneCart",
+        "phonehub_cart",
         cart
     );
 
@@ -841,12 +1756,12 @@ function addToCart(id) {
     updateCounts();
 
     showToast(
-        "Phone added to cart 🛒"
+        "Added to cart 🛒"
     );
 }
 
 
-function showCart() {
+function renderCart() {
 
     const container =
         document.getElementById(
@@ -862,119 +1777,191 @@ function showCart() {
     container.innerHTML = "";
 
 
+    if (!cart.length) {
+
+        container.innerHTML = `
+
+            <div class="empty-state">
+
+                <h2>
+                    🛒 Your cart is empty
+                </h2>
+
+                <p>
+                    Add a phone to start shopping.
+                </p>
+
+            </div>
+
+        `;
+
+        updateCartTotal(0);
+
+        return;
+    }
+
+
     let total = 0;
 
 
-    if (cart.length === 0) {
+    cart.forEach(item => {
 
-        container.innerHTML = `
-            <div class="empty-state">
-                <h2>🛒 Cart is empty</h2>
-                <p>Add a phone to your cart.</p>
-            </div>
-        `;
-
-    } else {
-
-        cart.forEach(item => {
-
-            const phone =
-                phones.find(
-                    p => p.id === item.id
-                );
+        const phone =
+            phones.find(
+                p =>
+                    p.id === item.id
+            );
 
 
-            if (!phone) {
-                return;
-            }
+        if (!phone) {
+            return;
+        }
 
 
-            const itemTotal =
-                phone.price *
-                item.quantity;
+        total +=
+            phone.price *
+            item.quantity;
 
 
-            total += itemTotal;
+        container.innerHTML += `
+
+            <div class="cart-row">
+
+                <div class="cart-row-image">
+
+                    <img
+                        src="${phone.images[0]}"
+                        alt="${phone.name}"
+                        onerror="imageFallback(this)"
+                    >
+
+                </div>
 
 
-            container.innerHTML += `
+                <div>
 
-                <div class="cart-row">
+                    <div class="cart-row-name">
+                        ${phone.name}
+                    </div>
 
-                    <div>
+                    <div class="cart-row-price">
+                        ₹${money(phone.price)}
+                    </div>
 
-                        <strong>
-                            ${phone.name}
-                        </strong>
 
-                        <br>
+                    <div class="quantity-controls">
 
-                        ₹${formatPrice(phone.price)}
-                        × ${item.quantity}
+                        <button
+                            data-decrease="${phone.id}"
+                            type="button"
+                        >
+                            −
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            data-increase="${phone.id}"
+                            type="button"
+                        >
+                            +
+                        </button>
 
                     </div>
 
-                    <button
-                        type="button"
-                        data-remove-cart="${phone.id}"
-                    >
-                        Remove
-                    </button>
-
                 </div>
-            `;
 
-        });
+
+                <button
+                    class="remove-button"
+                    data-remove="${phone.id}"
+                    type="button"
+                >
+                    Remove
+                </button>
+
+            </div>
+        `;
+
+    });
+
+
+    updateCartTotal(total);
+}
+
+
+function updateCartTotal(total) {
+
+    const cartTotal =
+        document.getElementById(
+            "cartTotal"
+        );
+
+
+    const grandTotal =
+        document.getElementById(
+            "grandTotal"
+        );
+
+
+    if (cartTotal) {
+        cartTotal.textContent =
+            money(total);
+    }
+
+
+    if (grandTotal) {
+        grandTotal.textContent =
+            money(total);
+    }
+}
+
+
+function changeQuantity(id, amount) {
+
+    const item =
+        cart.find(
+            product =>
+                product.id === Number(id)
+        );
+
+
+    if (!item) {
+        return;
+    }
+
+
+    item.quantity += amount;
+
+
+    if (item.quantity <= 0) {
+
+        cart =
+            cart.filter(
+                product =>
+                    product.id !== Number(id)
+            );
 
     }
 
 
-    document.getElementById(
-        "cartTotal"
-    ).textContent =
-        formatPrice(total);
-
-
-    openModal(
-        "cartModal"
-    );
-}
-
-
-function removeFromCart(id) {
-
-    id = Number(id);
-
-
-    cart =
-        cart.filter(
-            item => item.id !== id
-        );
-
-
     saveStorage(
-        "phoneCart",
+        "phonehub_cart",
         cart
     );
 
 
     updateCounts();
 
-    showCart();
+    renderCart();
 }
 
 
-function closeCart() {
-
-    closeSpecificModal(
-        "cartModal"
-    );
-}
-
-
-/* =========================================
+/* =========================================================
    WISHLIST
-========================================= */
+========================================================= */
 
 function toggleWishlist(id) {
 
@@ -987,18 +1974,26 @@ function toggleWishlist(id) {
 
         wishlist =
             wishlist.filter(
-                item => item !== id
+                item =>
+                    item !== id
             );
+
+        showToast(
+            "Removed from wishlist"
+        );
 
     } else {
 
         wishlist.push(id);
 
+        showToast(
+            "Added to wishlist ❤️"
+        );
     }
 
 
     saveStorage(
-        "phoneWishlist",
+        "phonehub_wishlist",
         wishlist
     );
 
@@ -1011,7 +2006,7 @@ function toggleWishlist(id) {
 }
 
 
-function showWishlist() {
+function renderWishlist() {
 
     const container =
         document.getElementById(
@@ -1027,83 +2022,88 @@ function showWishlist() {
     container.innerHTML = "";
 
 
-    if (wishlist.length === 0) {
+    if (!wishlist.length) {
 
         container.innerHTML = `
+
             <div class="empty-state">
-                <h2>❤️ Wishlist is empty</h2>
+
+                <h2>
+                    ❤️ Wishlist is empty
+                </h2>
+
                 <p>
-                    Tap the heart on a phone
-                    to save it.
+                    Save phones you like here.
                 </p>
+
             </div>
+
         `;
 
-    } else {
-
-        wishlist.forEach(id => {
-
-            const phone =
-                phones.find(
-                    p => p.id === id
-                );
-
-
-            if (!phone) {
-                return;
-            }
-
-
-            container.innerHTML += `
-
-                <div class="cart-row">
-
-                    <div>
-
-                        <strong>
-                            ${phone.name}
-                        </strong>
-
-                        <br>
-
-                        ₹${formatPrice(
-                            phone.price
-                        )}
-
-                    </div>
-
-                    <button
-                        type="button"
-                        data-remove-wishlist="${phone.id}"
-                    >
-                        Remove
-                    </button>
-
-                </div>
-            `;
-
-        });
-
+        return;
     }
 
 
-    openModal(
-        "wishlistModal"
-    );
+    wishlist.forEach(id => {
+
+        const phone =
+            phones.find(
+                p =>
+                    p.id === id
+            );
+
+
+        if (!phone) {
+            return;
+        }
+
+
+        container.innerHTML += `
+
+            <div class="wishlist-row">
+
+                <div class="wishlist-row-image">
+
+                    <img
+                        src="${phone.images[0]}"
+                        alt="${phone.name}"
+                        onerror="imageFallback(this)"
+                    >
+
+                </div>
+
+
+                <div class="wishlist-row-info">
+
+                    <div class="wishlist-row-name">
+                        ${phone.name}
+                    </div>
+
+                    <div class="wishlist-row-price">
+                        ₹${money(phone.price)}
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="remove-button"
+                    data-wishlist-remove="${phone.id}"
+                    type="button"
+                >
+                    Remove
+                </button>
+
+            </div>
+        `;
+
+    });
 }
 
 
-function closeWishlist() {
-
-    closeSpecificModal(
-        "wishlistModal"
-    );
-}
-
-
-/* =========================================
+/* =========================================================
    COUNTERS
-========================================= */
+========================================================= */
 
 function updateCounts() {
 
@@ -1124,10 +2124,10 @@ function updateCounts() {
         cartCount.textContent =
             cart.reduce(
                 (sum, item) =>
-                    sum + Number(item.quantity),
+                    sum +
+                    Number(item.quantity),
                 0
             );
-
     }
 
 
@@ -1135,39 +2135,13 @@ function updateCounts() {
 
         wishlistCount.textContent =
             wishlist.length;
-
     }
 }
 
 
-/* =========================================
-   DARK MODE
-========================================= */
-
-function toggleTheme() {
-
-    document.body.classList.toggle(
-        "dark"
-    );
-
-
-    const theme =
-        document.body.classList.contains(
-            "dark"
-        )
-            ? "dark"
-            : "light";
-
-
-    saveStorage(
-        "phoneTheme",
-        theme
-    );
-
-
-    updateThemeButton();
-}
-
+/* =========================================================
+   THEME
+========================================================= */
 
 function updateThemeButton() {
 
@@ -1191,9 +2165,34 @@ function updateThemeButton() {
 }
 
 
-/* =========================================
+function toggleTheme() {
+
+    document.body.classList.toggle(
+        "dark"
+    );
+
+
+    const theme =
+        document.body.classList.contains(
+            "dark"
+        )
+            ? "dark"
+            : "light";
+
+
+    localStorage.setItem(
+        "phonehub_theme",
+        theme
+    );
+
+
+    updateThemeButton();
+}
+
+
+/* =========================================================
    SCROLL
-========================================= */
+========================================================= */
 
 function scrollToPhones() {
 
@@ -1209,15 +2208,14 @@ function scrollToPhones() {
 
 
     section.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+        behavior: "smooth"
     });
 }
 
 
-/* =========================================
+/* =========================================================
    CLEAR FILTERS
-========================================= */
+========================================================= */
 
 function clearFilters() {
 
@@ -1236,9 +2234,19 @@ function clearFilters() {
             "maxPrice"
         );
 
+    const rating =
+        document.getElementById(
+            "ratingSelect"
+        );
+
     const sort =
         document.getElementById(
             "sortSelect"
+        );
+
+    const brand =
+        document.getElementById(
+            "brandSelect"
         );
 
 
@@ -1254,17 +2262,26 @@ function clearFilters() {
         max.value = "";
     }
 
+    if (rating) {
+        rating.value = "0";
+    }
+
     if (sort) {
         sort.value = "default";
     }
 
+    if (brand) {
+        brand.value = "All";
+    }
 
-    currentBrand = "All";
+
+    currentBrand =
+        "All";
 
 
     document
         .querySelectorAll(
-            ".brand-btn"
+            ".brand-button"
         )
         .forEach(button => {
 
@@ -1280,13 +2297,13 @@ function clearFilters() {
 }
 
 
-/* =========================================
+/* =========================================================
    CHECKOUT
-========================================= */
+========================================================= */
 
 function checkout() {
 
-    if (cart.length === 0) {
+    if (!cart.length) {
 
         showToast(
             "Your cart is empty."
@@ -1297,14 +2314,17 @@ function checkout() {
 
 
     showToast(
-        "Checkout system is ready to connect with a payment gateway."
+        "Checkout is ready for payment integration."
     );
 }
 
 
-/* =========================================
+/* =========================================================
    TOAST
-========================================= */
+========================================================= */
+
+let toastTimer = null;
+
 
 function showToast(message) {
 
@@ -1324,36 +2344,8 @@ function showToast(message) {
         toast.id =
             "phoneHubToast";
 
-
-        toast.style.position =
-            "fixed";
-
-        toast.style.bottom =
-            "25px";
-
-        toast.style.left =
-            "50%";
-
-        toast.style.transform =
-            "translateX(-50%)";
-
-        toast.style.background =
-            "#111827";
-
-        toast.style.color =
-            "white";
-
-        toast.style.padding =
-            "12px 20px";
-
-        toast.style.borderRadius =
-            "10px";
-
-        toast.style.zIndex =
-            "9999";
-
-        toast.style.boxShadow =
-            "0 8px 25px rgba(0,0,0,.25)";
+        toast.className =
+            "toast";
 
         document.body.appendChild(
             toast
@@ -1365,104 +2357,82 @@ function showToast(message) {
         message;
 
 
-    clearTimeout(
-        toast.hideTimer
+    toast.classList.add(
+        "show"
     );
 
 
-    toast.style.display =
-        "block";
+    clearTimeout(
+        toastTimer
+    );
 
 
-    toast.hideTimer =
+    toastTimer =
         setTimeout(
             () => {
-                toast.style.display =
-                    "none";
+
+                toast.classList.remove(
+                    "show"
+                );
+
             },
             2500
         );
 }
 
 
-/* =========================================
-   EVENT LISTENERS
-========================================= */
+/* =========================================================
+   INITIALIZATION
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     () => {
 
-        const searchInput =
-            document.getElementById(
-                "searchInput"
+        /* THEME */
+
+        if (
+            localStorage.getItem(
+                "phonehub_theme"
+            ) === "dark"
+        ) {
+
+            document.body.classList.add(
+                "dark"
             );
+        }
 
 
-        const searchButton =
-            document.getElementById(
-                "searchButton"
-            );
+        updateThemeButton();
 
 
-        const exploreButton =
-            document.getElementById(
-                "exploreButton"
-            );
+        /* INITIAL PRODUCTS */
+
+        displayPhones(
+            phones
+        );
 
 
-        const themeButton =
-            document.getElementById(
-                "themeButton"
-            );
-
-
-        const cartButton =
-            document.getElementById(
-                "cartButton"
-            );
-
-
-        const wishlistButton =
-            document.getElementById(
-                "wishlistButton"
-            );
-
-
-        const sortSelect =
-            document.getElementById(
-                "sortSelect"
-            );
-
-
-        const minPrice =
-            document.getElementById(
-                "minPrice"
-            );
-
-
-        const maxPrice =
-            document.getElementById(
-                "maxPrice"
-            );
-
-
-        const clearButton =
-            document.getElementById(
-                "clearFilters"
-            );
+        updateCounts();
 
 
         /* SEARCH */
 
-        if (searchInput) {
-
-            searchInput.addEventListener(
+        document
+            .getElementById(
+                "searchInput"
+            )
+            ?.addEventListener(
                 "input",
-                searchPhones
+                applyFilters
             );
 
-            searchInput.addEventListener(
+
+        document
+            .getElementById(
+                "searchInput"
+            )
+            ?.addEventListener(
                 "keydown",
                 event => {
 
@@ -1470,130 +2440,177 @@ document.addEventListener(
                         event.key === "Enter"
                     ) {
 
-                        searchPhones();
+                        applyFilters();
 
                         scrollToPhones();
+
                     }
 
                 }
             );
-        }
 
 
-        if (searchButton) {
-
-            searchButton.addEventListener(
+        document
+            .getElementById(
+                "searchButton"
+            )
+            ?.addEventListener(
                 "click",
                 () => {
 
-                    searchPhones();
+                    applyFilters();
 
                     scrollToPhones();
 
                 }
             );
-        }
 
 
         /* EXPLORE */
 
-        if (exploreButton) {
-
-            exploreButton.addEventListener(
+        document
+            .getElementById(
+                "exploreButton"
+            )
+            ?.addEventListener(
                 "click",
                 scrollToPhones
             );
 
-        }
-
 
         /* THEME */
 
-        if (themeButton) {
-
-            themeButton.addEventListener(
+        document
+            .getElementById(
+                "themeButton"
+            )
+            ?.addEventListener(
                 "click",
                 toggleTheme
             );
 
-        }
-
 
         /* CART */
 
-        if (cartButton) {
-
-            cartButton.addEventListener(
+        document
+            .getElementById(
+                "cartButton"
+            )
+            ?.addEventListener(
                 "click",
-                showCart
-            );
+                () => {
 
-        }
+                    renderCart();
+
+                    openModal(
+                        "cartModal"
+                    );
+
+                }
+            );
 
 
         /* WISHLIST */
 
-        if (wishlistButton) {
-
-            wishlistButton.addEventListener(
+        document
+            .getElementById(
+                "wishlistButton"
+            )
+            ?.addEventListener(
                 "click",
-                showWishlist
-            );
+                () => {
 
-        }
+                    renderWishlist();
+
+                    openModal(
+                        "wishlistModal"
+                    );
+
+                }
+            );
 
 
         /* SORT */
 
-        if (sortSelect) {
-
-            sortSelect.addEventListener(
+        document
+            .getElementById(
+                "sortSelect"
+            )
+            ?.addEventListener(
                 "change",
-                sortPhones
+                applyFilters
             );
 
-        }
+
+        /* BRAND SELECT */
+
+        document
+            .getElementById(
+                "brandSelect"
+            )
+            ?.addEventListener(
+                "change",
+                event => {
+
+                    setBrand(
+                        event.target.value
+                    );
+
+                }
+            );
 
 
-        /* PRICE FILTERS */
+        /* PRICE */
 
-        if (minPrice) {
-
-            minPrice.addEventListener(
+        document
+            .getElementById(
+                "minPrice"
+            )
+            ?.addEventListener(
                 "input",
                 applyFilters
             );
 
-        }
 
-
-        if (maxPrice) {
-
-            maxPrice.addEventListener(
+        document
+            .getElementById(
+                "maxPrice"
+            )
+            ?.addEventListener(
                 "input",
                 applyFilters
             );
 
-        }
+
+        /* RATING */
+
+        document
+            .getElementById(
+                "ratingSelect"
+            )
+            ?.addEventListener(
+                "change",
+                applyFilters
+            );
 
 
         /* CLEAR */
 
-        if (clearButton) {
-
-            clearButton.addEventListener(
+        document
+            .getElementById(
+                "clearFilters"
+            )
+            ?.addEventListener(
                 "click",
                 clearFilters
             );
 
-        }
 
-
-        /* BRAND BUTTONS */
+        /* BRANDS */
 
         document
             .querySelectorAll(
-                ".brand-btn"
+                ".brand-button"
             )
             .forEach(button => {
 
@@ -1601,8 +2618,37 @@ document.addEventListener(
                     "click",
                     () => {
 
-                        filterBrand(
+                        setBrand(
                             button.dataset.brand
+                        );
+
+                        scrollToPhones();
+
+                    }
+                );
+
+            });
+
+
+        /* QUICK PRICE */
+
+        document
+            .querySelectorAll(
+                ".quick-filter"
+            )
+            .forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        quickPrice(
+                            Number(
+                                button.dataset.min
+                            ),
+                            Number(
+                                button.dataset.max
+                            )
                         );
 
                     }
@@ -1611,17 +2657,13 @@ document.addEventListener(
             });
 
 
-        /* PHONE GRID */
+        /* PRODUCT GRID */
 
-        const grid =
-            document.getElementById(
+        document
+            .getElementById(
                 "phoneGrid"
-            );
-
-
-        if (grid) {
-
-            grid.addEventListener(
+            )
+            ?.addEventListener(
                 "click",
                 event => {
 
@@ -1639,7 +2681,7 @@ document.addEventListener(
 
                     const cartButton =
                         event.target.closest(
-                            "[data-cart]"
+                            "[data-add-cart]"
                         );
 
 
@@ -1657,7 +2699,7 @@ document.addEventListener(
 
                     if (detailsButton) {
 
-                        showDetails(
+                        openProduct(
                             Number(
                                 detailsButton.dataset.details
                             )
@@ -1671,7 +2713,7 @@ document.addEventListener(
 
                         addToCart(
                             Number(
-                                cartButton.dataset.cart
+                                cartButton.dataset.addCart
                             )
                         );
 
@@ -1680,42 +2722,108 @@ document.addEventListener(
                 }
             );
 
-        }
 
-
-        /* MODAL BUTTONS */
+        /* PRODUCT MODAL */
 
         document
             .getElementById(
-                "closePhoneModal"
+                "productModalBody"
             )
             ?.addEventListener(
                 "click",
-                closeModal
+                event => {
+
+                    const thumbnail =
+                        event.target.closest(
+                            "[data-image]"
+                        );
+
+
+                    const addCart =
+                        event.target.closest(
+                            "[data-detail-cart]"
+                        );
+
+
+                    const buyNow =
+                        event.target.closest(
+                            "[data-buy-now]"
+                        );
+
+
+                    if (thumbnail) {
+
+                        const mainImage =
+                            document.getElementById(
+                                "mainProductImage"
+                            );
+
+
+                        if (mainImage) {
+
+                            mainImage.src =
+                                thumbnail.dataset.image;
+                        }
+
+
+                        document
+                            .querySelectorAll(
+                                ".thumbnail"
+                            )
+                            .forEach(item => {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            });
+
+
+                        thumbnail.classList.add(
+                            "active"
+                        );
+
+                    }
+
+
+                    if (addCart) {
+
+                        addToCart(
+                            Number(
+                                addCart.dataset.detailCart
+                            )
+                        );
+
+                        closeModal(
+                            "productModal"
+                        );
+
+                    }
+
+
+                    if (buyNow) {
+
+                        addToCart(
+                            Number(
+                                buyNow.dataset.buyNow
+                            )
+                        );
+
+                        closeModal(
+                            "productModal"
+                        );
+
+                        showToast(
+                            "Phone added. Checkout is ready."
+                        );
+
+                    }
+
+                }
             );
 
 
-        document
-            .getElementById(
-                "closeCartModal"
-            )
-            ?.addEventListener(
-                "click",
-                closeCart
-            );
-
-
-        document
-            .getElementById(
-                "closeWishlistModal"
-            )
-            ?.addEventListener(
-                "click",
-                closeWishlist
-            );
-
-
-        /* CART REMOVE */
+        /* CART EVENTS */
 
         document
             .getElementById(
@@ -1725,19 +2833,69 @@ document.addEventListener(
                 "click",
                 event => {
 
-                    const button =
+                    const increase =
                         event.target.closest(
-                            "[data-remove-cart]"
+                            "[data-increase]"
                         );
 
 
-                    if (button) {
+                    const decrease =
+                        event.target.closest(
+                            "[data-decrease]"
+                        );
 
-                        removeFromCart(
+
+                    const remove =
+                        event.target.closest(
+                            "[data-remove]"
+                        );
+
+
+                    if (increase) {
+
+                        changeQuantity(
                             Number(
-                                button.dataset.removeCart
-                            )
+                                increase.dataset.increase
+                            ),
+                            1
                         );
+
+                    }
+
+
+                    if (decrease) {
+
+                        changeQuantity(
+                            Number(
+                                decrease.dataset.decrease
+                            ),
+                            -1
+                        );
+
+                    }
+
+
+                    if (remove) {
+
+                        cart =
+                            cart.filter(
+                                item =>
+                                    item.id !==
+                                    Number(
+                                        remove.dataset.remove
+                                    )
+                            );
+
+
+                        saveStorage(
+                            "phonehub_cart",
+                            cart
+                        );
+
+
+                        updateCounts();
+
+                        renderCart();
 
                     }
 
@@ -1745,7 +2903,7 @@ document.addEventListener(
             );
 
 
-        /* WISHLIST REMOVE */
+        /* WISHLIST EVENTS */
 
         document
             .getElementById(
@@ -1755,21 +2913,22 @@ document.addEventListener(
                 "click",
                 event => {
 
-                    const button =
+                    const remove =
                         event.target.closest(
-                            "[data-remove-wishlist]"
+                            "[data-wishlist-remove]"
                         );
 
 
-                    if (button) {
+                    if (remove) {
 
                         toggleWishlist(
                             Number(
-                                button.dataset.removeWishlist
+                                remove.dataset.wishlistRemove
                             )
                         );
 
-                        showWishlist();
+
+                        renderWishlist();
 
                     }
 
@@ -1777,35 +2936,44 @@ document.addEventListener(
             );
 
 
-        /* DETAILS ADD TO CART */
+        /* CLOSE BUTTONS */
 
         document
             .getElementById(
-                "modalBody"
+                "closeProductModal"
             )
             ?.addEventListener(
                 "click",
-                event => {
+                () =>
+                    closeModal(
+                        "productModal"
+                    )
+            );
 
-                    const button =
-                        event.target.closest(
-                            "[data-modal-cart]"
-                        );
+
+        document
+            .getElementById(
+                "closeCartModal"
+            )
+            ?.addEventListener(
+                "click",
+                () =>
+                    closeModal(
+                        "cartModal"
+                    )
+            );
 
 
-                    if (button) {
-
-                        addToCart(
-                            Number(
-                                button.dataset.modalCart
-                            )
-                        );
-
-                        closeModal();
-
-                    }
-
-                }
+        document
+            .getElementById(
+                "closeWishlistModal"
+            )
+            ?.addEventListener(
+                "click",
+                () =>
+                    closeModal(
+                        "wishlistModal"
+                    )
             );
 
 
@@ -1821,7 +2989,7 @@ document.addEventListener(
             );
 
 
-        /* CLOSE MODALS BY BACKDROP */
+        /* BACKDROP */
 
         document
             .querySelectorAll(
@@ -1837,7 +3005,7 @@ document.addEventListener(
                             event.target === modal
                         ) {
 
-                            closeSpecificModal(
+                            closeModal(
                                 modal.id
                             );
 
@@ -1849,7 +3017,7 @@ document.addEventListener(
             });
 
 
-        /* ESCAPE */
+        /* ESC */
 
         document.addEventListener(
             "keydown",
@@ -1859,49 +3027,22 @@ document.addEventListener(
                     event.key === "Escape"
                 ) {
 
-                    closeModal();
+                    document
+                        .querySelectorAll(
+                            ".modal.show"
+                        )
+                        .forEach(modal => {
 
-                    closeCart();
+                            closeModal(
+                                modal.id
+                            );
 
-                    closeWishlist();
+                        });
 
                 }
 
             }
         );
-
-
-        /* LOAD THEME */
-
-        const savedTheme =
-            loadStorage(
-                "phoneTheme",
-                "light"
-            );
-
-
-        if (
-            savedTheme === "dark"
-        ) {
-
-            document.body.classList.add(
-                "dark"
-            );
-
-        }
-
-
-        updateThemeButton();
-
-
-        /* INITIAL DISPLAY */
-
-        displayPhones(
-            phones
-        );
-
-
-        updateCounts();
 
     }
 );
