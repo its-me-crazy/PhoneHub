@@ -1,77 +1,278 @@
-// Smartphone Data Catalog
+// Complete Smartphone Catalog (₹8,000 to ₹1,90,000)
 const phones = [
+    // --- Entry Level & Budget Range (₹8,000 - ₹15,000) ---
     {
         id: 1,
-        name: "iPhone 17 Pro Max",
-        brand: "Apple",
-        price: 149999,
-        originalPrice: 169999,
-        discount: "12% OFF",
-        rating: 4.9,
-        ram: "12 GB RAM",
-        storage: "256 GB",
+        name: "POCO C65 5G",
+        brand: "Xiaomi",
+        price: 7999,
+        originalPrice: 10999,
+        discount: "27% OFF",
+        rating: 4.2,
+        ram: "4 GB RAM",
+        storage: "128 GB",
         network: "5G",
-        processor: "Apple A19 Pro",
-        display: "6.9-inch Super Retina XDR OLED",
-        battery: "4850 mAh",
-        camera: "48MP + 48MP + 48MP Triple Rear",
+        processor: "MediaTek Helio G85",
+        display: "6.74-inch HD+ 90Hz Display",
+        battery: "5000 mAh",
+        camera: "50MP Dual AI Camera",
         colors: [
-            { name: "Titanium Black", hex: "#232323" },
-            { name: "Titanium Natural", hex: "#b8b2a6" },
-            { name: "Titanium Silver", hex: "#e3e3e3" }
+            { name: "Matte Black", hex: "#1c1c1c" },
+            { name: "Pastel Blue", hex: "#a0c4ff" }
         ],
-        image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=600&q=80",
-        badge: "Flagship"
+        image: "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=600&q=80",
+        badge: "Budget King"
     },
     {
         id: 2,
-        name: "iPhone 17",
-        brand: "Apple",
-        price: 89999,
-        originalPrice: 99999,
-        discount: "10% OFF",
-        rating: 4.8,
-        ram: "8 GB RAM",
+        name: "Redmi 13C 5G",
+        brand: "Xiaomi",
+        price: 9499,
+        originalPrice: 13999,
+        discount: "32% OFF",
+        rating: 4.3,
+        ram: "6 GB RAM",
         storage: "128 GB",
         network: "5G",
-        processor: "Apple A19 Bionic",
-        display: "6.3-inch Super Retina XDR OLED",
-        battery: "4000 mAh",
-        camera: "48MP + 12MP Dual Rear",
+        processor: "MediaTek Dimensity 6100+",
+        display: "6.74-inch HD+ 90Hz LCD",
+        battery: "5000 mAh",
+        camera: "50MP AI Dual Camera",
         colors: [
-            { name: "Space Black", hex: "#111111" },
-            { name: "Starlight", hex: "#f8f5ee" },
-            { name: "Deep Pink", hex: "#f43f5e" }
+            { name: "Starrail Green", hex: "#2d6a4f" },
+            { name: "Starlight Black", hex: "#111111" }
         ],
-        image: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80",
-        badge: "Trending"
+        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
+        badge: "Best Seller"
     },
     {
         id: 3,
-        name: "Galaxy S26 Ultra",
-        brand: "Samsung",
-        price: 139999,
-        originalPrice: 159999,
-        discount: "13% OFF",
-        rating: 4.9,
-        ram: "12 GB RAM",
-        storage: "256 GB",
+        name: "Realme C65 5G",
+        brand: "Realme",
+        price: 10499,
+        originalPrice: 13999,
+        discount: "25% OFF",
+        rating: 4.3,
+        ram: "6 GB RAM",
+        storage: "128 GB",
         network: "5G",
-        processor: "Snapdragon 8 Gen 5",
-        display: "6.8-inch Dynamic AMOLED 2X 120Hz",
+        processor: "MediaTek Dimensity 6300",
+        display: "6.67-inch 120Hz HD+ Display",
         battery: "5000 mAh",
-        camera: "200MP + 50MP + 50MP + 10MP",
+        camera: "50MP AI Primary Camera",
         colors: [
-            { name: "Titanium Gray", hex: "#6b7280" },
-            { name: "Titanium Black", hex: "#1f2937" },
-            { name: "Titanium Violet", hex: "#7c3aed" }
+            { name: "Feather Green", hex: "#52b788" },
+            { name: "Glowing Black", hex: "#1b263b" }
         ],
-        image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80",
-        badge: "Best Camera"
+        image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
+        badge: "5G Value"
     },
     {
         id: 4,
-        name: "Galaxy S25 5G",
+        name: "Moto G34 5G",
+        brand: "Motorola",
+        price: 11999,
+        originalPrice: 14999,
+        discount: "20% OFF",
+        rating: 4.4,
+        ram: "8 GB RAM",
+        storage: "128 GB",
+        network: "5G",
+        processor: "Snapdragon 695 5G",
+        display: "6.5-inch 120Hz HD+ Display",
+        battery: "5000 mAh",
+        camera: "50MP + 2MP Dual Rear",
+        colors: [
+            { name: "Ocean Green Vegan", hex: "#2a9d8f" },
+            { name: "Ice Blue", hex: "#90e0ef" }
+        ],
+        image: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80",
+        badge: "Clean Android"
+    },
+    {
+        id: 5,
+        name: "Samsung Galaxy M15 5G",
+        brand: "Samsung",
+        price: 13499,
+        originalPrice: 16999,
+        discount: "20% OFF",
+        rating: 4.3,
+        ram: "6 GB RAM",
+        storage: "128 GB",
+        network: "5G",
+        processor: "MediaTek Dimensity 6100+",
+        display: "6.5-inch FHD+ Super AMOLED 90Hz",
+        battery: "6000 mAh",
+        camera: "50MP Triple Rear Camera",
+        colors: [
+            { name: "Celestial Blue", hex: "#48cae4" },
+            { name: "Stone Grey", hex: "#4a4e69" }
+        ],
+        image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80",
+        badge: "6000mAh Power"
+    },
+
+    // --- Mid-Range (₹15,000 - ₹35,000) ---
+    {
+        id: 6,
+        name: "Vivo T3 5G",
+        brand: "Vivo",
+        price: 19999,
+        originalPrice: 22999,
+        discount: "13% OFF",
+        rating: 4.5,
+        ram: "8 GB RAM",
+        storage: "128 GB",
+        network: "5G",
+        processor: "MediaTek Dimensity 7200",
+        display: "6.67-inch FHD+ AMOLED 120Hz",
+        battery: "5000 mAh",
+        camera: "50MP Sony OIS Camera",
+        colors: [
+            { name: "Cosmic Blue", hex: "#03045e" },
+            { name: "Crystal Flake", hex: "#caf0f8" }
+        ],
+        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",
+        badge: "Sony Camera"
+    },
+    {
+        id: 7,
+        name: "Nothing Phone (2a)",
+        brand: "Nothing",
+        price: 23999,
+        originalPrice: 25999,
+        discount: "8% OFF",
+        rating: 4.5,
+        ram: "8 GB RAM",
+        storage: "128 GB",
+        network: "5G",
+        processor: "MediaTek Dimensity 7200 Pro",
+        display: "6.7-inch Flexible AMOLED 120Hz",
+        battery: "5000 mAh",
+        camera: "50MP + 50MP Dual OIS",
+        colors: [
+            { name: "Dark Glyph", hex: "#27272a" },
+            { name: "White Glyph", hex: "#f4f4f5" }
+        ],
+        image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=600&q=80",
+        badge: "Glyph Lights"
+    },
+    {
+        id: 8,
+        name: "OnePlus Nord CE 4",
+        brand: "OnePlus",
+        price: 24999,
+        originalPrice: 27999,
+        discount: "10% OFF",
+        rating: 4.6,
+        ram: "8 GB RAM",
+        storage: "256 GB",
+        network: "5G",
+        processor: "Snapdragon 7 Gen 3",
+        display: "6.7-inch FHD+ AMOLED 120Hz",
+        battery: "5500 mAh",
+        camera: "50MP Sony LYT-600 OIS",
+        colors: [
+            { name: "Celadon Marble", hex: "#84a98c" },
+            { name: "Dark Chrome", hex: "#353535" }
+        ],
+        image: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=600&q=80",
+        badge: "100W Charging"
+    },
+    {
+        id: 9,
+        name: "OPPO Reno 11 5G",
+        brand: "Oppo",
+        price: 28999,
+        originalPrice: 38999,
+        discount: "25% OFF",
+        rating: 4.4,
+        ram: "8 GB RAM",
+        storage: "256 GB",
+        network: "5G",
+        processor: "MediaTek Dimensity 7050",
+        display: "6.7-inch Curved OLED 120Hz",
+        battery: "5000 mAh",
+        camera: "32MP Telephoto Portrait",
+        colors: [
+            { name: "Wave Green", hex: "#52b788" },
+            { name: "Rock Grey", hex: "#4a5568" }
+        ],
+        image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
+        badge: "Curved Display"
+    },
+
+    // --- Premium Segment (₹35,000 - ₹75,000) ---
+    {
+        id: 10,
+        name: "Realme GT 6 5G",
+        brand: "Realme",
+        price: 40999,
+        originalPrice: 44999,
+        discount: "8% OFF",
+        rating: 4.5,
+        ram: "12 GB RAM",
+        storage: "256 GB",
+        network: "5G",
+        processor: "Snapdragon 8s Gen 3",
+        display: "6.78-inch 120Hz LTPO AMOLED",
+        battery: "5500 mAh",
+        camera: "50MP Sony LYT-808 OIS",
+        colors: [
+            { name: "Fluid Silver", hex: "#d1d5db" },
+            { name: "Razor Green", hex: "#15803d" }
+        ],
+        image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
+        badge: "Super Bright"
+    },
+    {
+        id: 11,
+        name: "iPhone 14",
+        brand: "Apple",
+        price: 54999,
+        originalPrice: 69900,
+        discount: "21% OFF",
+        rating: 4.7,
+        ram: "6 GB RAM",
+        storage: "128 GB",
+        network: "5G",
+        processor: "Apple A15 Bionic",
+        display: "6.1-inch Super Retina XDR",
+        battery: "3279 mAh",
+        camera: "12MP + 12MP Dual Rear",
+        colors: [
+            { name: "Midnight Black", hex: "#111827" },
+            { name: "Starlight White", hex: "#f8fafc" },
+            { name: "Blue", hex: "#3b82f6" }
+        ],
+        image: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80",
+        badge: "Popular iPhone"
+    },
+    {
+        id: 12,
+        name: "OnePlus 12 5G",
+        brand: "OnePlus",
+        price: 64999,
+        originalPrice: 69999,
+        discount: "7% OFF",
+        rating: 4.8,
+        ram: "12 GB RAM",
+        storage: "256 GB",
+        network: "5G",
+        processor: "Snapdragon 8 Gen 3",
+        display: "6.82-inch QHD+ ProXDR 120Hz",
+        battery: "5400 mAh",
+        camera: "50MP + 64MP Hasselblad",
+        colors: [
+            { name: "Silky Black", hex: "#262626" },
+            { name: "Flowy Emerald", hex: "#047857" }
+        ],
+        image: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=600&q=80",
+        badge: "Hasselblad Camera"
+    },
+    {
+        id: 13,
+        name: "Samsung Galaxy S24 5G",
         brand: "Samsung",
         price: 74999,
         originalPrice: 84999,
@@ -80,193 +281,177 @@ const phones = [
         ram: "8 GB RAM",
         storage: "256 GB",
         network: "5G",
-        processor: "Exynos 2500 / Snapdragon 8 Gen 4",
-        display: "6.2-inch FHD+ Dynamic AMOLED 2X",
+        processor: "Exynos 2400 / Snapdragon 8 Gen 3",
+        display: "6.2-inch Dynamic AMOLED 2X 120Hz",
         battery: "4000 mAh",
-        camera: "50MP + 12MP + 10MP",
+        camera: "50MP + 12MP + 10MP Triple",
         colors: [
             { name: "Onyx Black", hex: "#18181b" },
-            { name: "Cobalt Violet", hex: "#4c1d95" }
+            { name: "Cobalt Violet", hex: "#4c1d95" },
+            { name: "Amber Yellow", hex: "#f59e0b" }
         ],
-        image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
-        badge: "Popular"
+        image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80",
+        badge: "Galaxy AI"
     },
+
+    // --- Ultra Flagship & Foldables Range (₹80,000 - ₹1,90,000) ---
     {
-        id: 5,
-        name: "OnePlus 13 5G",
-        brand: "OnePlus",
-        price: 64999,
-        originalPrice: 69999,
-        discount: "7% OFF",
-        rating: 4.7,
-        ram: "16 GB RAM",
-        storage: "512 GB",
-        network: "5G",
-        processor: "Snapdragon 8 Gen 4",
-        display: "6.82-inch QHD+ ProXDR AMOLED 120Hz",
-        battery: "5400 mAh",
-        camera: "50MP + 64MP + 48MP Hasselblad",
-        colors: [
-            { name: "Silky Black", hex: "#262626" },
-            { name: "Emerald Green", hex: "#047857" }
-        ],
-        image: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=600&q=80",
-        badge: "Fast Charge"
-    },
-    {
-        id: 6,
-        name: "Google Pixel 9 Pro",
-        brand: "Google",
-        price: 109999,
-        originalPrice: 119999,
-        discount: "8% OFF",
-        rating: 4.6,
-        ram: "16 GB RAM",
+        id: 14,
+        name: "iPhone 15",
+        brand: "Apple",
+        price: 79900,
+        originalPrice: 79900,
+        discount: "Official",
+        rating: 4.8,
+        ram: "6 GB RAM",
         storage: "128 GB",
         network: "5G",
-        processor: "Google Tensor G4",
-        display: "6.3-inch Super Actua LTPO OLED",
-        battery: "4700 mAh",
-        camera: "50MP + 48MP + 48MP Triple Rear",
+        processor: "Apple A16 Bionic",
+        display: "6.1-inch Dynamic Island OLED",
+        battery: "3349 mAh",
+        camera: "48MP Dual Camera",
         colors: [
-            { name: "Obsidian", hex: "#0f172a" },
-            { name: "Porcelain", hex: "#f1f5f9" },
-            { name: "Hazel", hex: "#4d7c0f" }
+            { name: "Black", hex: "#1c1917" },
+            { name: "Pink", hex: "#fda4af" },
+            { name: "Blue", hex: "#93c5fd" }
         ],
-        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
-        badge: "Pure AI"
+        image: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80",
+        badge: "Dynamic Island"
     },
     {
-        id: 7,
-        name: "Xiaomi 15 Ultra",
-        brand: "Xiaomi",
-        price: 89999,
-        originalPrice: 99999,
-        discount: "10% OFF",
-        rating: 4.6,
-        ram: "16 GB RAM",
-        storage: "512 GB",
-        network: "5G",
-        processor: "Snapdragon 8 Gen 4",
-        display: "6.73-inch WQHD+ AMOLED 120Hz",
-        battery: "5300 mAh",
-        camera: "50MP Leica Quad Camera System",
-        colors: [
-            { name: "Black Leather", hex: "#1c1917" },
-            { name: "White Ceramic", hex: "#fafafa" }
-        ],
-        image: "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=600&q=80",
-        badge: "Leica Optics"
-    },
-    {
-        id: 8,
+        id: 15,
         name: "Vivo X100 Pro",
         brand: "Vivo",
         price: 89999,
         originalPrice: 96999,
         discount: "7% OFF",
-        rating: 4.6,
+        rating: 4.8,
         ram: "16 GB RAM",
         storage: "512 GB",
         network: "5G",
         processor: "MediaTek Dimensity 9300",
         display: "6.78-inch LTPO AMOLED 120Hz",
         battery: "5400 mAh",
-        camera: "50MP ZEISS 1-inch Main Sensor",
+        camera: "50MP ZEISS 1-inch Camera",
         colors: [
             { name: "Asteroid Black", hex: "#18181b" },
             { name: "Sunset Orange", hex: "#ea580c" }
         ],
         image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80",
-        badge: "ZEISS Camera"
+        badge: "ZEISS 1-inch Lens"
     },
     {
-        id: 9,
-        name: "Nothing Phone (2a)",
-        brand: "Nothing",
-        price: 23999,
-        originalPrice: 25999,
+        id: 16,
+        name: "Google Pixel 9 Pro",
+        brand: "Google",
+        price: 109999,
+        originalPrice: 119999,
         discount: "8% OFF",
-        rating: 4.4,
-        ram: "8 GB RAM",
+        rating: 4.7,
+        ram: "16 GB RAM",
         storage: "128 GB",
         network: "5G",
-        processor: "MediaTek Dimensity 7200 Pro",
-        display: "6.7-inch Flexible AMOLED 120Hz",
-        battery: "5000 mAh",
-        camera: "50MP + 50MP Dual Rear",
+        processor: "Google Tensor G4",
+        display: "6.3-inch Super Actua LTPO OLED",
+        battery: "4700 mAh",
+        camera: "50MP + 48MP + 48MP Triple",
         colors: [
-            { name: "Dark Glyph", hex: "#27272a" },
-            { name: "White Glyph", hex: "#f4f4f5" }
+            { name: "Obsidian", hex: "#0f172a" },
+            { name: "Porcelain", hex: "#f1f5f9" }
         ],
-        image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=600&q=80",
-        badge: "Value Pick"
+        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80",
+        badge: "Google AI"
     },
     {
-        id: 10,
-        name: "Motorola Edge 50 Ultra",
-        brand: "Motorola",
-        price: 59999,
-        originalPrice: 64999,
-        discount: "7% OFF",
-        rating: 4.5,
+        id: 17,
+        name: "Galaxy S24 Ultra",
+        brand: "Samsung",
+        price: 129999,
+        originalPrice: 144999,
+        discount: "10% OFF",
+        rating: 4.9,
         ram: "12 GB RAM",
         storage: "512 GB",
         network: "5G",
-        processor: "Snapdragon 8s Gen 3",
-        display: "6.7-inch pOLED 144Hz",
-        battery: "4500 mAh",
-        camera: "50MP + 50MP + 64MP",
-        colors: [
-            { name: "Nordic Wood", hex: "#a16207" },
-            { name: "Peach Fuzz", hex: "#f97316" }
-        ],
-        image: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=600&q=80",
-        badge: "Clean OS"
-    },
-    {
-        id: 11,
-        name: "OPPO Find X7 Ultra",
-        brand: "Oppo",
-        price: 79999,
-        originalPrice: 89999,
-        discount: "11% OFF",
-        rating: 4.6,
-        ram: "16 GB RAM",
-        storage: "256 GB",
-        network: "5G",
-        processor: "Snapdragon 8 Gen 3",
-        display: "6.82-inch AMOLED 120Hz",
+        processor: "Snapdragon 8 Gen 3 for Galaxy",
+        display: "6.8-inch QHD+ Dynamic AMOLED 2X",
         battery: "5000 mAh",
-        camera: "50MP Quad Main Hasselblad",
+        camera: "200MP Quad Camera + S-Pen",
         colors: [
-            { name: "Ocean Blue", hex: "#0284c7" },
-            { name: "Sepia Brown", hex: "#78350f" }
+            { name: "Titanium Black", hex: "#1f2937" },
+            { name: "Titanium Gray", hex: "#6b7280" },
+            { name: "Titanium Violet", hex: "#7c3aed" }
         ],
         image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80",
-        badge: "Dual Telephoto"
+        badge: "200MP Camera"
     },
     {
-        id: 12,
-        name: "Realme GT 6 5G",
-        brand: "Realme",
-        price: 40999,
-        originalPrice: 44999,
-        discount: "8% OFF",
-        rating: 4.4,
-        ram: "12 GB RAM",
+        id: 18,
+        name: "iPhone 16 Pro Max",
+        brand: "Apple",
+        price: 144900,
+        originalPrice: 159900,
+        discount: "9% OFF",
+        rating: 4.9,
+        ram: "8 GB RAM",
         storage: "256 GB",
         network: "5G",
-        processor: "Snapdragon 8s Gen 3",
-        display: "6.78-inch 120Hz LTPO AMOLED",
-        battery: "5500 mAh",
-        camera: "50MP Sony LYT-808 + 50MP",
+        processor: "Apple A18 Pro Chip",
+        display: "6.9-inch ProMotion 120Hz OLED",
+        battery: "4685 mAh",
+        camera: "48MP Triple Camera Control",
         colors: [
-            { name: "Fluid Silver", hex: "#d1d5db" },
-            { name: "Razor Green", hex: "#15803d" }
+            { name: "Desert Titanium", hex: "#c2a98f" },
+            { name: "Natural Titanium", hex: "#b8b2a6" },
+            { name: "Black Titanium", hex: "#1f2421" }
+        ],
+        image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=600&q=80",
+        badge: "A18 Pro Flagship"
+    },
+    {
+        id: 19,
+        name: "Samsung Galaxy Z Fold 6",
+        brand: "Samsung",
+        price: 164999,
+        originalPrice: 184999,
+        discount: "11% OFF",
+        rating: 4.8,
+        ram: "12 GB RAM",
+        storage: "512 GB",
+        network: "5G",
+        processor: "Snapdragon 8 Gen 3 for Galaxy",
+        display: "7.6-inch Foldable Dynamic AMOLED",
+        battery: "4400 mAh",
+        camera: "50MP Triple Rear Camera",
+        colors: [
+            { name: "Silver Shadow", hex: "#94a3b8" },
+            { name: "Navy Blue", hex: "#1e3a8a" },
+            { name: "Pink", hex: "#f472b6" }
         ],
         image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80",
-        badge: "Super Bright"
+        badge: "Premium Foldable"
+    },
+    {
+        id: 20,
+        name: "iPhone 17 Pro Max Ultra",
+        brand: "Apple",
+        price: 189999,
+        originalPrice: 199999,
+        discount: "5% OFF",
+        rating: 5.0,
+        ram: "16 GB RAM",
+        storage: "1 TB Storage",
+        network: "5G",
+        processor: "Apple A19 Pro Bionic",
+        display: "6.9-inch Super Retina ProMotion",
+        battery: "5100 mAh",
+        camera: "48MP Quad Fusion + 10x Periscope",
+        colors: [
+            { name: "Deep Titanium", hex: "#0f172a" },
+            { name: "Gold Titanium", hex: "#d97706" }
+        ],
+        image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=600&q=80",
+        badge: "1TB Ultra Storage"
     }
 ];
 
@@ -280,7 +465,7 @@ let currentSort = "default";
 let cart = [];
 let wishlist = [];
 
-// Format Prices
+// Format Currency
 function formatPrice(num) {
     return num.toLocaleString("en-IN");
 }
@@ -300,7 +485,7 @@ function renderPhones() {
         return matchesBrand && matchesSearch && matchesMin && matchesMax;
     });
 
-    // Sorting
+    // Sorting Options
     if (currentSort === "low") {
         filtered.sort((a, b) => a.price - b.price);
     } else if (currentSort === "high") {
@@ -315,8 +500,8 @@ function renderPhones() {
 
     if (filtered.length === 0) {
         grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 50px 20px; color: var(--muted);">
-            <h3>No smartphones found</h3>
-            <p>Try resetting filters or search criteria.</p>
+            <h3>No smartphones found matching your filter</h3>
+            <p>Try clearing your price filters or search term.</p>
         </div>`;
         return;
     }
@@ -345,7 +530,7 @@ function renderPhones() {
                         <span class="price">₹${formatPrice(p.price)}</span>
                         <span class="old-price">₹${formatPrice(p.originalPrice)}</span>
                         <span class="discount">${p.discount}</span>
-                        <div class="bank-offer">💳 Extra 10% off on Select Cards</div>
+                        <div class="bank-offer">💳 Extra 10% off on HDFC & ICICI Cards</div>
                     </div>
                     <div class="color-preview">
                         <span>Colors:</span>
@@ -361,7 +546,7 @@ function renderPhones() {
     }).join("");
 }
 
-// Search & Filtering Actions
+// Search & Filter Actions
 function searchPhones() {
     searchQuery = document.getElementById("searchInput").value.trim();
     renderPhones();
@@ -416,7 +601,7 @@ function goHome() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// Modal View Details
+// Product Modal Details
 function openModal(id) {
     const p = phones.find(item => item.id === id);
     if (!p) return;
@@ -435,11 +620,11 @@ function openModal(id) {
                     ₹${formatPrice(p.price)}
                     <span class="product-old-price">₹${formatPrice(p.originalPrice)}</span>
                 </div>
-                <div class="offer-badge">🔥 Deal of the day - ${p.discount}</div>
+                <div class="offer-badge">🔥 Deal of the Day - ${p.discount}</div>
                 <p class="product-description">
-                    Equipped with state-of-the-art ${p.processor} processor, a vivid ${p.display}, and a versatile ${p.camera} camera system. Enjoy all-day power with ${p.battery} battery capacity.
+                    Powered by ${p.processor}, featuring a stunning ${p.display}, and a high-resolution ${p.camera}. Includes a ${p.battery} battery with superfast charging technology.
                 </p>
-                <div class="color-title">Available Colors:</div>
+                <div class="color-title">Select Color Variant:</div>
                 <div class="color-options">
                     ${p.colors.map((c, idx) => `
                         <div class="color-option ${idx === 0 ? 'selected' : ''}" onclick="selectColor(this)">
@@ -456,7 +641,7 @@ function openModal(id) {
                     <div class="spec-row"><span>RAM / Storage</span><span>${p.ram} | ${p.storage}</span></div>
                 </div>
                 <div class="card-buttons" style="margin-top:20px;">
-                    <button class="add-cart" style="padding:12px;" onclick="addToCart(${p.id}); closeModal();">Add to Shopping Cart</button>
+                    <button class="add-cart" style="padding:12px;" onclick="addToCart(${p.id}); closeModal();">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -473,7 +658,7 @@ function closeModal() {
     document.getElementById("phoneModal").style.display = "none";
 }
 
-// Cart & Wishlist Management
+// Shopping Cart & Wishlist Actions
 function addToCart(id) {
     const existing = cart.find(item => item.id === id);
     if (existing) {
@@ -482,7 +667,7 @@ function addToCart(id) {
         cart.push({ id: id, qty: 1 });
     }
     updateCounts();
-    alert("Item added to cart!");
+    alert("Phone added to cart!");
 }
 
 function toggleWishlist(id) {
@@ -589,13 +774,13 @@ function checkout() {
         alert("Your cart is empty!");
         return;
     }
-    alert("Thank you for your order! Order placed successfully.");
+    alert("Order placed successfully!");
     cart = [];
     updateCounts();
     closeCart();
 }
 
-// Theme Switcher
+// Dark / Light Theme Toggle
 function toggleTheme() {
     document.body.classList.toggle("dark");
     const themeBtn = document.getElementById("themeBtn");
@@ -606,7 +791,7 @@ function toggleTheme() {
     }
 }
 
-// Close modals when clicking outside
+// Close Modals on Outer Overlay Click
 window.onclick = function(event) {
     const pModal = document.getElementById("phoneModal");
     const cModal = document.getElementById("cartModal");
